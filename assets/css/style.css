@@ -218,3 +218,58 @@ footer {
     text-align: center;
     padding: 2rem 0;
 }
+
+/* ================================== */
+/* ATURAN UNTUK TAMPILAN HP      */
+/* (Untuk layar dengan lebar <= 768px) */
+/* ================================== */
+@media (max-width: 768px) {
+    /* Atur ulang padding agar tidak terlalu lebar */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Sembunyikan navigasi di header (opsional, untuk menu hamburger nanti) */
+    /* Untuk sekarang kita buat jadi menurun saja */
+    header nav ul {
+        /* Ini akan membuat menu menjadi vertikal jika diperlukan,
+           namun untuk portfolio sederhana kita bisa biarkan */
+        gap: 1rem;
+    }
+
+    /* Ubah ukuran font judul utama agar tidak terlalu besar */
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Ubah tata letak "About Me" menjadi menurun */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ubah tata letak timeline menjadi 1 kolom penuh */
+    .timeline::after {
+        left: 20px; /* Pindahkan garis timeline ke kiri */
+    }
+    .timeline-item,
+    .timeline-item.right {
+        width: 100%;
+        left: 0;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+    .timeline-item::after,
+    .timeline-item.right::after {
+        left: 12px; /* Pindahkan bulatan ke garis timeline */
+    }
+
+    /* Atur judul section agar tidak terlalu besar */
+    .section-title {
+        font-size: 2rem;
+    }
+}
